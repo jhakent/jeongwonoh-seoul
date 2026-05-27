@@ -12,30 +12,32 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="googlebot" content="index, follow">
 <meta name="theme-color" content="#004EA2">
-<link rel="canonical" href="./">
+<link rel="canonical" href="https://jhakent.github.io/jeongwonoh-seoul/">
 
 <!-- Open Graph (Facebook, KakaoTalk, Naver, Line) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="정원오 서울시장 후보 공약 한눈에 보기">
 <meta property="og:description" content="기호 1번 더불어민주당. 일 잘하는 서울시장 정원오. 민선 6·7·8기 성동구청장 3선. 25개 자치구 공약과 9개 분야 정책 정리.">
-<meta property="og:image" content="jwo-og.png">
+<meta property="og:image" content="https://jhakent.github.io/jeongwonoh-seoul/jwo-og.png">
+<meta property="og:image:secure_url" content="https://jhakent.github.io/jeongwonoh-seoul/jwo-og.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="기호 1번 더불어민주당 서울특별시장 후보 정원오 일 잘하는 서울시장">
-<meta property="og:url" content="./">
+<meta property="og:url" content="https://jhakent.github.io/jeongwonoh-seoul/">
 <meta property="og:site_name" content="정원오 서울시장 캠프">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="정원오 서울시장 후보 공약 한눈에 보기">
 <meta name="twitter:description" content="기호 1번 더불어민주당. 일 잘하는 서울시장 정원오. 25개 자치구 공약과 9개 분야 정책.">
-<meta name="twitter:image" content="jwo-og.png">
+<meta name="twitter:image" content="https://jhakent.github.io/jeongwonoh-seoul/jwo-og.png">
 <meta name="twitter:image:alt" content="기호 1번 더불어민주당 서울특별시장 후보 정원오">
 
 <!-- Favicon (OG 이미지 재활용) -->
-<link rel="icon" href="jwo-og.png" type="image/png">
-<link rel="apple-touch-icon" href="jwo-og.png">
+<link rel="icon" href="https://jhakent.github.io/jeongwonoh-seoul/jwo-og.png" type="image/png">
+<link rel="apple-touch-icon" href="https://jhakent.github.io/jeongwonoh-seoul/jwo-og.png">
 
 <!-- 구조화 데이터: 후보자 정보 -->
 <script type="application/ld+json">
@@ -46,10 +48,12 @@
   "alternateName": "鄭源伍",
   "jobTitle": "서울특별시장 후보",
   "description": "기호 1번 더불어민주당 2026 서울특별시장 후보. 민선 6·7·8기 성동구청장 3선.",
-  "image": "jwo-og.png",
+  "image": "https://jhakent.github.io/jeongwonoh-seoul/jwo-og.png",
+  "url": "https://jhakent.github.io/jeongwonoh-seoul/",
   "memberOf": {
     "@type": "Organization",
-    "name": "더불어민주당"
+    "name": "더불어민주당",
+    "url": "https://theminjoo.kr"
   },
   "alumniOf": [
     {"@type": "EducationalOrganization", "name": "서울시립대학교 경상대학 경제학과"},
@@ -57,7 +61,10 @@
   ],
   "knowsAbout": ["도시행정", "지방자치", "주거정책", "젠트리피케이션 방지", "필수노동자 보호"],
   "birthDate": "1968-08-12",
-  "nationality": "대한민국"
+  "nationality": "대한민국",
+  "sameAs": [
+    "https://2026win.kr/sub/introduce/view.html?seq=112"
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -65,6 +72,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "정원오 서울시장 캠프",
+  "url": "https://jhakent.github.io/jeongwonoh-seoul/",
   "description": "기호 1번 더불어민주당 서울특별시장 후보 정원오 공약 정리 페이지",
   "inLanguage": "ko-KR"
 }
@@ -372,7 +380,8 @@ img.emoji{
 }
 .cards-3{grid-template-columns:repeat(3,1fr)}
 .card{
-  padding:28px 26px;
+  position:relative;
+  padding:26px 26px 26px 26px;
   background:#fff;
   border:1px solid var(--line);
   border-radius:var(--r);
@@ -385,19 +394,24 @@ img.emoji{
   border-color:#B7C2D2;
 }
 .card-ico{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:52px;height:52px;
-  background:var(--primary-soft);
-  border-radius:14px;
-  margin-bottom:16px;
-  font-size:26px;
+  position:absolute;
+  top:22px;right:22px;
+  font-size:30px;
   line-height:1;
+  opacity:.92;
+  pointer-events:none;
+}
+.card-ico .emoji{
+  height:1em;width:1em;
+  margin:0;
+  vertical-align:0;
 }
 .card-h{
   font-size:20px;font-weight:700;
   letter-spacing:-0.022em;
   line-height:1.35;
   margin-bottom:14px;
+  padding-right:46px;
   color:var(--tx);
 }
 .card-list{
@@ -645,17 +659,95 @@ img.emoji{
 
 /* FOOTER */
 .ft{
-  padding:40px var(--pad-x) 56px;
+  padding:48px var(--pad-x) 56px;
   background:#fff;
-  text-align:center;
   border-top:1px solid var(--line);
 }
+.ft-inner{
+  max-width:var(--max);
+  margin:0 auto;
+}
+.ft-h{
+  font-size:15px;
+  font-weight:700;
+  color:var(--tx);
+  letter-spacing:-0.018em;
+  margin-bottom:18px;
+  display:flex;align-items:center;gap:8px;
+}
+.ft-h::before{
+  content:"";
+  width:4px;height:16px;
+  background:var(--primary);
+  border-radius:2px;
+}
+.ft-link-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-bottom:36px;
+}
+.ft-link{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  padding:20px 22px;
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  transition:all .2s;
+  position:relative;
+}
+.ft-link::after{
+  content:"";
+  position:absolute;
+  top:20px;right:20px;
+  width:16px;height:16px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a7d85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17L17 7M8 7h9v9'/></svg>") center/contain no-repeat;
+  transition:transform .2s;
+}
+.ft-link:hover{
+  border-color:var(--primary);
+  background:var(--primary-soft);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+.ft-link:hover::after{
+  transform:translate(2px,-2px);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23004EA2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17L17 7M8 7h9v9'/></svg>");
+}
+.ft-link-tag{
+  font-size:11.5px;
+  font-weight:700;
+  color:var(--primary);
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+}
+.ft-link-title{
+  font-size:16px;
+  font-weight:700;
+  color:var(--tx);
+  letter-spacing:-0.018em;
+  padding-right:24px;
+}
+.ft-link-desc{
+  font-size:13px;
+  font-weight:500;
+  color:var(--tx3);
+  letter-spacing:-0.005em;
+  line-height:1.55;
+  margin-top:2px;
+}
 .ft-cr{
-  font-size:14px;font-weight:500;
+  font-size:13.5px;
+  font-weight:500;
   color:var(--tx3);
   letter-spacing:-0.005em;
   line-height:1.75;
-  max-width:600px;
+  text-align:center;
+  padding-top:28px;
+  border-top:1px solid var(--line-soft);
+  max-width:720px;
   margin:0 auto;
 }
 .ft-cr a{
@@ -686,10 +778,10 @@ img.emoji{
   .ach{padding:26px 22px}
   .ach-h{font-size:20px}
   .ach-list li{font-size:15.5px}
-  .card{padding:26px 22px}
-  .card-h{font-size:18.5px}
+  .card{padding:24px 22px}
+  .card-h{font-size:18.5px;padding-right:42px}
   .card-list li{font-size:15.5px;line-height:1.7}
-  .card-ico{width:48px;height:48px;font-size:24px}
+  .card-ico{font-size:26px;top:20px;right:20px}
   .vote-grid{grid-template-columns:1fr}
   .vote{padding:52px var(--pad-x) 60px}
   .vote-h{font-size:28px}
@@ -700,6 +792,10 @@ img.emoji{
   .info{grid-template-columns:96px 1fr;font-size:15.5px;padding:24px 22px;gap:12px 18px}
   .tab{padding:12px 16px;font-size:15px;margin:8px 2px;min-height:44px}
   .tabs-inner{padding:0 8px}
+  .ft{padding:40px var(--pad-x) 48px}
+  .ft-link-grid{grid-template-columns:1fr;gap:8px;margin-bottom:28px}
+  .ft-link{padding:18px 20px}
+  .ft-link-title{font-size:15.5px}
   .dist-panel{padding:28px 22px}
   .dist-panel-h h3{font-size:24px}
   .dist-panel-h span{font-size:13px}
@@ -750,8 +846,8 @@ img.emoji{
     <button class="tab active" data-target="intro"><span class="emoji-src">🙋</span> 인사말</button>
     <button class="tab" data-target="record"><span class="emoji-src">🏆</span> 성과</button>
     <button class="tab" data-target="vision"><span class="emoji-src">🌏</span> 비전</button>
-    <button class="tab" data-target="chakchak"><span class="emoji-src">✅</span> 착착 공약</button>
-    <button class="tab" data-target="saejung"><span class="emoji-src">💰</span> 세아정</button>
+    <button class="tab" data-target="chakchak"><span class="emoji-src">✅</span> 분야 정책</button>
+    <button class="tab" data-target="saejung"><span class="emoji-src">💰</span> 생활 정책</button>
     <button class="tab" data-target="district"><span class="emoji-src">📍</span> 자치구별</button>
     <button class="tab" data-target="vote"><span class="emoji-src">🗳️</span> 투표</button>
   </div>
@@ -760,7 +856,7 @@ img.emoji{
 <!-- 1. 인사말 -->
 <section class="sec" id="intro">
   <div class="sec-in">
-    <span class="sec-eyebrow">Greeting</span>
+    <span class="sec-eyebrow">인사말</span>
     <h2 class="sec-h">시민의 불편과<br>싸우는 서울시장</h2>
 
     <div class="intro-grid">
@@ -790,7 +886,7 @@ img.emoji{
 <!-- 2. 성과 -->
 <section class="sec sec-alt" id="record">
   <div class="sec-in">
-    <span class="sec-eyebrow">Track Record</span>
+    <span class="sec-eyebrow">주요 성과</span>
     <h2 class="sec-h">압도적 성과로<br>증명했습니다</h2>
     <p class="sec-desc">성동구청장 재임 12년간 만든 변화는 국가 표준이 됐습니다. 성동구에서 만든 전국 최초 정책들이 이듬해 국회를 통과했습니다.</p>
 
@@ -843,9 +939,9 @@ img.emoji{
 <!-- 3. 비전 -->
 <section class="sec" id="vision">
   <div class="sec-in">
-    <span class="sec-eyebrow">Vision</span>
+    <span class="sec-eyebrow">비전</span>
     <h2 class="sec-h">아시아 수도,<br>글로벌 G2 도시 서울</h2>
-    <p class="sec-desc">시민이 원하는 도시, 세계가 부러워하는 도시. 1대 목표 아래 2대 미래혁신도심, 3대 창업클러스터, 4대 특구 파이프라인을 작동시킵니다.</p>
+    <p class="sec-desc">서울의 도시·산업 큰 그림. 1대 목표 아래 2대 미래혁신도심, 3대 창업클러스터, 4대 특구 파이프라인을 동시에 가동합니다.</p>
 
     <div class="pillars">
       <div class="pillar">
@@ -928,12 +1024,12 @@ img.emoji{
   </div>
 </section>
 
-<!-- 4. 착착 공약 -->
+<!-- 4. 분야 정책 -->
 <section class="sec sec-alt" id="chakchak">
   <div class="sec-in">
-    <span class="sec-eyebrow">Chak-Chak Promise</span>
+    <span class="sec-eyebrow">분야 정책</span>
     <h2 class="sec-h">서울을 착착<br>바꿔가겠습니다</h2>
-    <p class="sec-desc">시민 모두가 행복한 내일을 위한 9개 분야 정책. 사후 복구가 아닌 선제적 예방, 보여주기가 아닌 실제로 바꾸는 행정.</p>
+    <p class="sec-desc">시민의 일상을 받치는 9개 분야 정책. 안전·복지·노동부터 환경·반려동물까지, 사후 복구가 아닌 선제적 예방으로 접근합니다.</p>
 
     <div class="cards cards-3">
       <div class="card">
@@ -1023,12 +1119,12 @@ img.emoji{
   </div>
 </section>
 
-<!-- 5. 세아정 -->
+<!-- 5. 생활 정책 -->
 <section class="sec" id="saejung">
   <div class="sec-in">
-    <span class="sec-eyebrow">Sae · A · Jeong</span>
-    <h2 class="sec-h">세금이 아깝지 않은 정책<br>세 · 아 · 정</h2>
-    <p class="sec-desc">시민의 문자 한 통, 제안 하나하나를 허투루 넘기지 않고 정책으로 바꾸겠습니다. 보여주기 행정이 아니라 실제로 바꾸는 행정.</p>
+    <span class="sec-eyebrow">생활 정책</span>
+    <h2 class="sec-h">출근길부터 동네까지<br>세 · 아 · 정</h2>
+    <p class="sec-desc">‛세 · 아 · 정'은 ‛세금이 아깝지 않은 정책'의 줄임말입니다. 시민의 문자 한 통, 제안 하나하나를 정책으로 바꾸겠습니다. 일상에서 매일 마주치는 작은 변화 5가지.</p>
 
     <div class="cards">
       <div class="card">
@@ -1088,7 +1184,7 @@ img.emoji{
 <!-- 6. 자치구별 -->
 <section class="sec sec-alt" id="district">
   <div class="sec-in">
-    <span class="sec-eyebrow">District</span>
+    <span class="sec-eyebrow">자치구별 공약</span>
     <h2 class="sec-h">서울 모든 구를<br>구석구석까지 촘촘하게</h2>
     <p class="sec-desc">25개 자치구마다 7개 핵심 공약을 준비했습니다.</p>
 
@@ -1105,7 +1201,7 @@ img.emoji{
 <!-- 7. 투표 -->
 <section class="vote" id="vote">
   <div class="vote-inner">
-    <span class="vote-eyebrow">Vote</span>
+    <span class="vote-eyebrow">투표 안내</span>
     <h2 class="vote-h">투표는 내일의 시작입니다</h2>
 
     <div class="vote-grid">
@@ -1126,7 +1222,27 @@ img.emoji{
 </section>
 
 <footer class="ft">
-  <p class="ft-cr">본 페이지는 2026 서울특별시장 선거 정원오 후보 책자형 선거공보를 토대로 재구성한 자료입니다.<br>공식 정보는 <a href="https://www.nec.go.kr" target="_blank" rel="noopener">중앙선거관리위원회</a>를 참고하시기 바랍니다.</p>
+  <div class="ft-inner">
+    <h3 class="ft-h">공식 정보 더 보기</h3>
+    <div class="ft-link-grid">
+      <a href="https://2026win.kr/sub/introduce/view.html?seq=112" target="_blank" rel="noopener" class="ft-link">
+        <span class="ft-link-tag">더불어민주당 공식</span>
+        <span class="ft-link-title">정원오 후보 소개</span>
+        <span class="ft-link-desc">2026WIN 후보자 페이지에서<br>공약·프로필·미디어 보기</span>
+      </a>
+      <a href="https://www.nec.go.kr" target="_blank" rel="noopener" class="ft-link">
+        <span class="ft-link-tag">선거 공식</span>
+        <span class="ft-link-title">중앙선거관리위원회</span>
+        <span class="ft-link-desc">선거 일정·후보자 정보·<br>공식 선거 공보 조회</span>
+      </a>
+      <a href="https://info.nec.go.kr/bizcommon/popup/popup_search_prevoteForm.xhtml?electionId=0020260603" target="_blank" rel="noopener" class="ft-link">
+        <span class="ft-link-tag">투표 안내</span>
+        <span class="ft-link-title">내 투표소 찾기</span>
+        <span class="ft-link-desc">주소로 사전·본투표소<br>위치 즉시 확인</span>
+      </a>
+    </div>
+    <p class="ft-cr">본 페이지는 2026 서울특별시장 선거 정원오 후보 책자형 선거공보를 토대로 재구성한 비공식 자료입니다.<br>공식 정보는 <a href="https://www.nec.go.kr" target="_blank" rel="noopener">중앙선거관리위원회</a> 및 <a href="https://2026win.kr/sub/introduce/view.html?seq=112" target="_blank" rel="noopener">더불어민주당 후보 소개 페이지</a>를 참고하시기 바랍니다.</p>
+  </div>
 </footer>
 
 <script>

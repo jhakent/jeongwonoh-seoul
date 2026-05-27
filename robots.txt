@@ -33,7 +33,7 @@ Allow: /
 User-agent: kakaotalk-scrap
 Allow: /
 
-# AI 크롤러 (선택적 허용)
+# AI 크롤러
 User-agent: GPTBot
 Allow: /
 
@@ -43,4 +43,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: sitemap.xml
+Sitemap: https://jhakent.github.io/jeongwonoh-seoul/sitemap.xml
