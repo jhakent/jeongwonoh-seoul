@@ -297,13 +297,6 @@ img.emoji{
 }
 
 /* QUOTE */
-.intro-grid{
-  display:grid;
-  grid-template-columns:0.85fr 1.15fr;
-  gap:30px;
-  align-items:start;
-  margin-bottom:8px;
-}
 .poster-wrap{
   border-radius:var(--r-lg);
   overflow:hidden;
@@ -330,6 +323,7 @@ img.emoji{
   border-radius:var(--r-lg);
   border:1px solid var(--line);
   box-shadow:var(--shadow-sm);
+  margin-bottom:32px;
 }
 .quote-body p{
   font-size:19px;font-weight:500;
@@ -342,17 +336,25 @@ img.emoji{
   color:var(--primary);
 }
 
+/* PROFILE: 포스터 + 정보 카드 */
+.profile-grid{
+  display:grid;
+  grid-template-columns:0.7fr 1.3fr;
+  gap:24px;
+  align-items:stretch;
+}
+
 /* INFO */
 .info{
   display:grid;
   grid-template-columns:120px 1fr;
   gap:14px 24px;
   font-size:17px;
-  margin-top:36px;
   padding:28px 30px;
   background:#fff;
   border-radius:var(--r);
   border:1px solid var(--line);
+  align-content:start;
 }
 .info dt{
   font-weight:600;color:var(--tx3);
@@ -834,7 +836,7 @@ img.emoji{
   .vote-card-date{font-size:24px}
   .vote-card-time{font-size:16px;line-height:1.7}
   .vote-note{font-size:15px;padding:18px 20px}
-  .info{grid-template-columns:96px 1fr;font-size:15.5px;padding:24px 22px;gap:12px 18px}
+  .info{grid-template-columns:88px 1fr;font-size:14.5px;padding:18px 16px;gap:9px 12px}
   .tab{padding:12px 16px;font-size:15px;margin:8px 2px;min-height:44px}
   .tabs-inner{padding:0 8px}
   .ft{padding:40px var(--pad-x) 48px}
@@ -848,12 +850,12 @@ img.emoji{
   .dist-list li::before{width:26px;height:26px;font-size:13px}
   .dist-chip{font-size:15px;padding:10px 16px}
   .dist-help{font-size:15px;padding:14px 16px}
-  .quote{padding:30px 24px}
+  .quote{padding:30px 24px;margin-bottom:24px}
   .quote-body p{font-size:17.5px;line-height:1.85}
-  .intro-grid{
+  .profile-grid{
     grid-template-columns:140px 1fr;
-    gap:18px;
-    align-items:start;
+    gap:14px;
+    align-items:stretch;
   }
   .poster-wrap{
     max-width:140px;
@@ -877,10 +879,10 @@ img.emoji{
   .pillar-d{font-size:13px}
   .ach-h{font-size:18.5px}
   .card-h{font-size:17.5px}
-  .info{grid-template-columns:84px 1fr;font-size:15px}
-  .intro-grid{
+  .info{grid-template-columns:74px 1fr;font-size:13.5px;padding:16px 14px;gap:8px 10px}
+  .profile-grid{
     grid-template-columns:118px 1fr;
-    gap:14px;
+    gap:10px;
   }
   .poster-wrap{max-width:118px}
 }
@@ -926,27 +928,27 @@ img.emoji{
     <span class="sec-eyebrow">인사말</span>
     <h2 class="sec-h">시민의 불편과<br>싸우는 서울시장</h2>
 
-    <div class="intro-grid">
-      <div class="poster-wrap">
-        <img src="jeongwonoh-poster.webp" alt="기호 1번 더불어민주당 서울특별시장 후보 정원오. 일 잘하는 서울시장. 하나씩 착착!" class="poster" loading="lazy">
-      </div>
-      <div class="quote">
-        <div class="quote-body">
-          <p><em>서울시장은 시민의 삶을 지키는 자리입니다.</em></p>
-          <p>우리가 싸워야 할 것은 시민의 불편함입니다. 우리가 서 있어야 할 곳은 <em>시민의 삶 한복판</em>입니다.</p>
-          <p>말보다 결과로, 성과로 증명하는 행정. 시민이 체감하는 변화를 만들겠습니다. <em>세금을 시민의 삶에 쓰겠습니다.</em></p>
-        </div>
+    <div class="quote">
+      <div class="quote-body">
+        <p><em>서울시장은 시민의 삶을 지키는 자리입니다.</em></p>
+        <p>우리가 싸워야 할 것은 시민의 불편함입니다. 우리가 서 있어야 할 곳은 <em>시민의 삶 한복판</em>입니다.</p>
+        <p>말보다 결과로, 성과로 증명하는 행정. 시민이 체감하는 변화를 만들겠습니다. <em>세금을 시민의 삶에 쓰겠습니다.</em></p>
       </div>
     </div>
 
-    <dl class="info">
-      <dt>이름</dt><dd>정원오 (鄭源伍)</dd>
-      <dt>생년월일</dt><dd>1968. 8. 12. (만 57세)</dd>
-      <dt>소속</dt><dd>더불어민주당</dd>
-      <dt>학력</dt><dd>한양대학교 도시대학원 도시개발경영전공 박사 수료</dd>
-      <dt>주요 경력</dt><dd>민선 6·7·8기 성동구청장 (3선)<br>한양대학교 경영대학 특임교수<br>더불어민주당 이재명 당대표 자치분권 특보</dd>
-      <dt>선거사무소</dt><dd>서울특별시 중구 세종대로 47-1</dd>
-    </dl>
+    <div class="profile-grid">
+      <div class="poster-wrap">
+        <img src="jeongwonoh-poster.webp" alt="기호 1번 더불어민주당 서울특별시장 후보 정원오. 일 잘하는 서울시장. 하나씩 착착!" class="poster" loading="lazy">
+      </div>
+      <dl class="info">
+        <dt>이름</dt><dd>정원오 (鄭源伍)</dd>
+        <dt>생년월일</dt><dd>1968. 8. 12. (만 57세)</dd>
+        <dt>소속</dt><dd>더불어민주당</dd>
+        <dt>학력</dt><dd>한양대학교 도시대학원 도시개발경영전공 박사 수료</dd>
+        <dt>주요 경력</dt><dd>민선 6·7·8기 성동구청장 (3선)<br>한양대학교 경영대학 특임교수<br>더불어민주당 이재명 당대표 자치분권 특보</dd>
+        <dt>선거사무소</dt><dd>서울특별시 중구 세종대로 47-1</dd>
+      </dl>
+    </div>
   </div>
 </section>
 
