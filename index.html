@@ -719,6 +719,35 @@ img.emoji{
 .top-btn svg{
   width:22px;height:22px;
 }
+
+/* TOAST */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:36px;
+  transform:translate(-50%, 16px);
+  z-index:200;
+  background:rgba(8, 21, 58, .94);
+  color:#fff;
+  font-size:15px;font-weight:600;
+  letter-spacing:-0.012em;
+  padding:14px 22px;
+  border-radius:var(--r-pill);
+  box-shadow:0 12px 36px rgba(0,0,0,.32);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .28s, transform .28s, visibility .28s;
+  max-width:calc(100vw - 40px);
+  text-align:center;
+  pointer-events:none;
+  backdrop-filter:blur(12px);
+}
+.toast.show{
+  opacity:1;
+  visibility:visible;
+  transform:translate(-50%, 0);
+}
+
 @media(max-width:480px){
   .top-btn{
     right:16px;
@@ -727,6 +756,11 @@ img.emoji{
   }
   .top-btn svg{
     width:20px;height:20px;
+  }
+  .toast{
+    font-size:14px;
+    padding:12px 18px;
+    bottom:130px;
   }
 }
 
@@ -778,7 +812,31 @@ img.emoji{
   display:flex;flex-wrap:wrap;
   justify-content:center;
   gap:10px;
-  margin-bottom:36px;
+  margin-bottom:32px;
+}
+.call-share{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:#FFD84A;
+  color:#08153A;
+  font-size:17px;font-weight:800;
+  letter-spacing:-0.012em;
+  padding:16px 32px;
+  border:0;
+  border-radius:var(--r-pill);
+  cursor:pointer;
+  box-shadow:0 8px 24px rgba(255,216,74,.32);
+  transition:transform .2s, box-shadow .2s, background .2s;
+}
+.call-share:hover{
+  background:#FFE070;
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(255,216,74,.4);
+}
+.call-share:active{
+  transform:translateY(0);
+}
+.call-share svg{
+  width:20px;height:20px;
 }
 .call-pill{
   display:inline-flex;align-items:center;gap:8px;
@@ -795,24 +853,6 @@ img.emoji{
   color:#FFD84A;
   font-weight:800;
   font-variant-numeric:tabular-nums;
-}
-.call-arrow{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:48px;height:48px;
-  margin-top:6px;
-  border-radius:50%;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.15);
-  color:#FFD84A;
-  animation:bounce-down 2.2s ease-in-out infinite;
-}
-@keyframes bounce-down{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(8px)}
-}
-.call-arrow svg{width:22px;height:22px}
-@media (prefers-reduced-motion: reduce){
-  .call-arrow{animation:none}
 }
 
 /* FOOTER */
@@ -971,7 +1011,7 @@ img.emoji{
   .call-h{font-size:34px;letter-spacing:-0.032em}
   .call-sub{font-size:17px}
   .call-pill{font-size:13.5px;padding:9px 15px}
-  .call-arrow{width:44px;height:44px}
+  .call-share{font-size:16px;padding:15px 28px}
   .ft{padding:40px var(--pad-x) 48px}
   .ft-link-grid{grid-template-columns:repeat(2, minmax(0, 1fr));gap:10px;margin-bottom:28px}
   .ft-link{padding:18px 18px 16px}
@@ -1416,9 +1456,14 @@ img.emoji{
       <span class="call-pill">전국 최초 <b>5건</b> 정책 → 법률</span>
       <span class="call-pill">25개 자치구 <b>175개</b> 공약</span>
     </div>
-    <a href="#vote" class="call-arrow" aria-label="투표 안내로 이동">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-    </a>
+    <button type="button" class="call-share" data-share>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+        <polyline points="16 6 12 2 8 6"/>
+        <line x1="12" y1="2" x2="12" y2="15"/>
+      </svg>
+      가족·이웃에게 공유하기
+    </button>
   </div>
 </section>
 
@@ -1480,6 +1525,9 @@ img.emoji{
     <path d="M18 15l-6-6-6 6"/>
   </svg>
 </button>
+
+<!-- 토스트 -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <!-- Twemoji: X 트윗 스타일 SVG 이모지 -->
 <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"
@@ -1624,6 +1672,66 @@ if(topBtn){
     window.scrollTo({top:0, behavior:'smooth'});
   });
 }
+
+// 공유 기능 (Web Share API 우선, 클립보드 복사 폴백)
+const toast = document.getElementById('toast');
+let toastTimer = null;
+function showToast(msg){
+  if(!toast) return;
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>{
+    toast.classList.remove('show');
+  }, 2800);
+}
+
+async function shareSite(){
+  const data = {
+    title: '정원오 서울시장 후보 공약',
+    text: '기호 1번 더불어민주당. 일 잘하는 서울시장 정원오. 25개 자치구 공약과 9개 분야 정책 한눈에 보기.',
+    url: 'https://jhakent.github.io/jeongwonoh-seoul/'
+  };
+
+  // 1차: Web Share API (모바일 카톡/문자/메모 등 시스템 시트)
+  if(navigator.share){
+    try {
+      await navigator.share(data);
+      return;
+    } catch(err){
+      // 사용자가 취소한 경우는 조용히 종료
+      if(err && err.name === 'AbortError') return;
+      // 그 외 에러는 폴백으로
+    }
+  }
+
+  // 2차: 클립보드 복사
+  try {
+    await navigator.clipboard.writeText(data.url);
+    showToast('링크가 복사됐어요! 카카오톡에 붙여넣어 보내주세요.');
+    return;
+  } catch(err){
+    // 3차: execCommand 폴백 (구형 브라우저)
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = data.url;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('링크가 복사됐어요! 카카오톡에 붙여넣어 보내주세요.');
+    } catch(err2){
+      showToast('주소창의 URL을 복사해 공유해주세요.');
+    }
+  }
+}
+
+// 공유 버튼 모두 바인딩 (call 섹션 + 플로팅)
+document.querySelectorAll('[data-share]').forEach(btn=>{
+  btn.addEventListener('click', shareSite);
+});
 </script>
 </body>
 </html>
