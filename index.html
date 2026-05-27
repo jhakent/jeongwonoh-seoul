@@ -170,7 +170,7 @@ ul,ol{list-style:none}
 img.emoji{
   height:1.1em;width:1.1em;
   margin:0 .05em 0 .05em;
-  vertical-align:-0.15em;
+  vertical-align:middle;
   display:inline-block;
 }
 
@@ -281,6 +281,9 @@ img.emoji{
   border-bottom:1px solid var(--line);
   box-shadow:0 1px 8px rgba(0,0,0,.03);
   height:68px;
+  min-height:68px;
+  max-height:68px;
+  flex-shrink:0;
   contain:layout;
   width:100%;
   max-width:100%;
@@ -306,6 +309,7 @@ img.emoji{
   padding:14px 18px;
   margin:0 3px;
   font-size:16px;font-weight:600;
+  line-height:1;
   color:var(--tx2);
   letter-spacing:-0.012em;
   cursor:pointer;
@@ -1106,7 +1110,7 @@ img.emoji{
   .vote-note{font-size:15px;padding:18px 20px}
   .info{grid-template-columns:88px 1fr;font-size:14.5px;padding:18px 16px;gap:9px 12px}
   .tab{padding:11px 15px;font-size:14.5px;margin:0 2px;min-height:42px}
-  .tabs{height:60px}
+  .tabs{height:60px;min-height:60px;max-height:60px;flex-shrink:0}
   .tabs-inner{padding:0 8px}
   .call{padding:60px var(--pad-x)}
   .call-h{font-size:34px;letter-spacing:-0.032em}
