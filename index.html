@@ -1043,8 +1043,8 @@ img.emoji{
   <p class="ft-cr">본 페이지는 2026 서울특별시장 선거 정원오 후보 책자형 선거공보를 토대로 재구성한 자료입니다.<br>공식 정보는 <a href="https://www.nec.go.kr" target="_blank" rel="noopener">중앙선거관리위원회</a>를 참고하시기 바랍니다.</p>
 </footer>
 
-<!-- Twemoji -->
-<script src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<!-- Twemoji (X 트윗 스타일 이모지) -->
+<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <script>
 const districts = {
   "종로구":["서촌 세종대왕 탄생지 기념관 추진","숭인공영주차장 부지에 종로 제2청사 설립","관광밀집구역 스마트 횡단보도 등 교통안전 확보","도시철도 강북횡단선 재추진","종로구청사 생활 인프라·복합문화공간으로 신축","대학로 공공창작공간 확충, 예술인·소극장 및 작품 지원","종로 전통시장 실시간 통합 주차정보 시스템 추진"],
@@ -1113,15 +1113,23 @@ function renderDist(name){
 renderDist(distNames[0]);
 
 function applyTwemoji(){
-  if(typeof twemoji !== 'undefined'){
+  if(typeof twemoji !== 'undefined' && twemoji.parse){
     twemoji.parse(document.body, {
       folder: 'svg',
       ext: '.svg',
-      className: 'emoji'
+      className: 'emoji',
+      base: 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/'
     });
+  } else {
+    // 라이브러리 아직 로드 안 됐으면 잠시 후 재시도
+    setTimeout(applyTwemoji, 150);
   }
 }
-window.addEventListener('load', applyTwemoji);
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', applyTwemoji);
+} else {
+  applyTwemoji();
+}
 
 const tabs = document.querySelectorAll('.tab');
 tabs.forEach(tab=>{
