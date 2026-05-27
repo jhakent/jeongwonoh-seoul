@@ -131,9 +131,10 @@
   --font:'Pretendard','Pretendard-fallback',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
   --max:1080px;
   --pad:22px;
-  --pad-x:max(var(--pad),calc((100vw - var(--max)) / 2));
+  --pad-x:var(--pad);
 }
 *{box-sizing:border-box;margin:0;padding:0}
+img,svg,video,iframe,embed,object{max-width:100%;height:auto}
 /* 폰트 교체 시 깜빡임 최소화 - 폴백 폰트를 Pretendard 메트릭에 맞춤 */
 @font-face{
   font-family:'Pretendard-fallback';
@@ -144,7 +145,7 @@
   line-gap-override:0%;
   font-display:swap;
 }
-html{scroll-behavior:smooth;font-size:17px}
+html{scroll-behavior:smooth;font-size:17px;max-width:100%}
 /* 폰트 로드 완료 전 body 숨김 (깜빡임 차단) */
 html.fonts-loading body{opacity:0}
 body{
@@ -154,8 +155,11 @@ body{
   letter-spacing:-0.012em;
   line-height:1.75;
   word-break:keep-all;
+  overflow-wrap:break-word;
+  word-wrap:break-word;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  max-width:100%;
   opacity:1;
   transition:opacity .25s ease-out;
 }
@@ -182,6 +186,9 @@ img.emoji{
   overflow:hidden;
   isolation:isolate;
   contain:paint;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
 }
 .hero-portrait{
   position:absolute;
@@ -275,6 +282,9 @@ img.emoji{
   box-shadow:0 1px 8px rgba(0,0,0,.03);
   height:68px;
   contain:layout;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
 }
 .tabs-inner{
   max-width:var(--max);margin:0 auto;
@@ -313,6 +323,9 @@ img.emoji{
 /* SECTION */
 .sec{
   padding:64px var(--pad-x) 72px;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
 }
 .sec-alt{background:var(--bg-soft)}
 .sec-in{max-width:var(--max);margin:0 auto}
@@ -671,6 +684,7 @@ img.emoji{
   padding:64px var(--pad-x) 72px;
   width:100%;
   box-sizing:border-box;
+  max-width:100%;
 }
 .vote-inner{max-width:var(--max);margin:0 auto}
 .vote-eyebrow{
@@ -786,7 +800,7 @@ img.emoji{
   opacity:0;
   visibility:hidden;
   transition:opacity .28s, transform .28s, visibility .28s;
-  max-width:calc(100vw - 40px);
+  max-width:calc(100% - 40px);
   text-align:center;
   pointer-events:none;
   backdrop-filter:blur(12px);
@@ -809,6 +823,7 @@ img.emoji{
   overflow:hidden;
   width:100%;
   box-sizing:border-box;
+  max-width:100%;
 }
 .call-inner{
   max-width:var(--max);
@@ -903,6 +918,9 @@ img.emoji{
   padding:48px var(--pad-x) 56px;
   background:#fff;
   border-top:1px solid var(--line);
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
 }
 .ft-inner{
   max-width:var(--max);
