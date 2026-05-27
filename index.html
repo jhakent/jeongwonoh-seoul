@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>정원오 서울시장 후보 공약 · 일 잘하는 서울시장</title>
+<meta name="description" content="기호 1번 더불어민주당 정원오 서울특별시장 후보 공약 한눈에 보기">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --primary:#004EA2;
+  --primary-hi:#1068C7;
+  --primary-dark:#003876;
+  --primary-soft:#E3EEFB;
+  --accent:#E52A47;
+  --bg:#ffffff;
+  --bg-soft:#F4F7FC;
+  --bg-warm:#FAFBFD;
+  --line:#D9DEE7;
+  --line-soft:#E8EBF1;
+  --tx:#08101C;
+  --tx2:#383D45;
+  --tx3:#6D717A;
+  --d-bg:#08153A;
+  --shadow-sm:0 1px 3px rgba(15,20,30,.06);
+  --shadow:0 4px 16px rgba(15,30,60,.08);
+  --shadow-lg:0 10px 32px rgba(15,30,60,.10);
+  --r-sm:10px;
+  --r:16px;
+  --r-lg:22px;
+  --r-pill:999px;
+  --font:'Pretendard',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --max:1080px;
+  --pad:22px;
+  --pad-x:max(var(--pad),calc((100vw - var(--max)) / 2));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:17px}
+body{
+  font-family:var(--font);
+  color:var(--tx);
+  background:var(--bg-warm);
+  letter-spacing:-0.012em;
+  line-height:1.75;
+  word-break:keep-all;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+::selection{background:var(--primary);color:#fff}
+
+img.emoji{
+  height:1.1em;width:1.1em;
+  margin:0 .05em 0 .05em;
+  vertical-align:-0.15em;
+  display:inline-block;
+}
+
+/* HERO */
+.hero{
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(255,255,255,.08), transparent 50%),
+    radial-gradient(80% 60% at 0% 100%, rgba(0,0,0,.18), transparent 60%),
+    linear-gradient(135deg, #002A6B 0%, #004EA2 50%, #1068C7 100%);
+  color:#fff;
+  padding:56px var(--pad-x) 64px;
+  position:relative;
+}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:2}
+.hero-no{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:16px;font-weight:600;
+  background:rgba(255,255,255,.15);
+  padding:10px 20px 10px 12px;
+  border-radius:var(--r-pill);
+  margin-bottom:30px;
+  letter-spacing:0;
+  backdrop-filter:blur(8px);
+}
+.hero-no-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;
+  background:#fff;color:var(--primary);
+  border-radius:50%;
+  font-size:18px;font-weight:800;
+  letter-spacing:-0.02em;
+}
+.hero-tag{
+  font-size:18px;font-weight:600;
+  color:#FFD84A;
+  margin-bottom:14px;
+  letter-spacing:0.01em;
+}
+.hero-h{
+  font-size:48px;font-weight:800;
+  line-height:1.2;letter-spacing:-0.035em;
+  margin-bottom:24px;
+}
+.hero-h .accent{
+  display:inline-block;
+  color:#FFD84A;
+}
+.hero-sub{
+  font-size:19px;font-weight:500;
+  color:rgba(255,255,255,.92);
+  line-height:1.75;letter-spacing:-0.015em;
+  max-width:600px;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-top:30px;
+}
+.hero-chip{
+  font-size:15px;font-weight:500;
+  background:rgba(255,255,255,.13);
+  padding:9px 16px;
+  border-radius:var(--r-pill);
+  letter-spacing:-0.005em;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+/* TABS */
+.tabs{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 8px rgba(0,0,0,.03);
+}
+.tabs-inner{
+  max-width:var(--max);margin:0 auto;
+  display:flex;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding:0 12px;
+}
+.tabs-inner::-webkit-scrollbar{display:none}
+.tab{
+  flex:0 0 auto;
+  padding:14px 18px;
+  margin:10px 3px;
+  font-size:16px;font-weight:600;
+  color:var(--tx2);
+  letter-spacing:-0.012em;
+  cursor:pointer;
+  transition:all .18s;
+  white-space:nowrap;
+  background:transparent;
+  border:0;
+  border-radius:var(--r-pill);
+  display:inline-flex;align-items:center;gap:7px;
+  min-height:48px;
+}
+.tab:hover{color:var(--tx);background:var(--bg-soft)}
+.tab.active{
+  color:#fff;
+  background:var(--primary);
+  box-shadow:0 2px 8px rgba(0,78,162,.3);
+}
+
+/* SECTION */
+.sec{
+  padding:64px var(--pad-x) 72px;
+}
+.sec-alt{background:var(--bg-soft)}
+.sec-in{max-width:var(--max);margin:0 auto}
+.sec-eyebrow{
+  display:inline-block;
+  font-size:13px;font-weight:700;
+  color:var(--primary);
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 14px;
+  background:var(--primary-soft);
+  border-radius:var(--r-pill);
+}
+.sec-h{
+  font-size:34px;font-weight:800;
+  letter-spacing:-0.035em;
+  line-height:1.3;
+  margin-bottom:16px;
+  color:var(--tx);
+}
+.sec-desc{
+  font-size:17.5px;font-weight:500;
+  color:var(--tx2);
+  letter-spacing:-0.012em;
+  line-height:1.8;
+  margin-bottom:36px;
+  max-width:700px;
+}
+
+/* QUOTE */
+.quote{
+  background:linear-gradient(135deg, #fff 0%, var(--primary-soft) 100%);
+  padding:40px 32px;
+  border-radius:var(--r-lg);
+  border:1px solid var(--line);
+  position:relative;
+  box-shadow:var(--shadow-sm);
+}
+.quote::before{
+  content:"";
+  position:absolute;
+  top:24px;left:24px;
+  width:44px;height:44px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23004EA2' opacity='0.16'><path d='M9.5 6c-2.5 0-5 2-5 5.5C4.5 14 5.5 16 8 17l1-1.5c-1.5-.5-2-1.5-2-2.5h2.5V8H6.5C6.5 7 7.5 6 9.5 6zm9 0c-2.5 0-5 2-5 5.5 0 2.5 1 4.5 3.5 5.5l1-1.5c-1.5-.5-2-1.5-2-2.5H18.5V8h-3c0-1 1-2 3-2z'/></svg>") center/contain no-repeat;
+}
+.quote-body{
+  position:relative;
+  padding-left:10px;
+}
+.quote p{
+  font-size:19px;font-weight:500;
+  color:var(--tx);
+  line-height:1.85;letter-spacing:-0.015em;
+}
+.quote p+p{margin-top:18px}
+.quote em{
+  font-style:normal;font-weight:700;
+  color:var(--primary);
+}
+
+/* INFO */
+.info{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:14px 24px;
+  font-size:17px;
+  margin-top:36px;
+  padding:28px 30px;
+  background:#fff;
+  border-radius:var(--r);
+  border:1px solid var(--line);
+}
+.info dt{
+  font-weight:600;color:var(--tx3);
+  letter-spacing:-0.005em;
+}
+.info dd{
+  font-weight:500;color:var(--tx);
+  letter-spacing:-0.012em;
+  line-height:1.7;
+}
+
+/* PILLARS */
+.pillars{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-bottom:40px;
+}
+.pillar{
+  padding:28px 22px;
+  color:#fff;
+  display:flex;flex-direction:column;gap:6px;
+  border-radius:var(--r);
+  position:relative;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.pillar:nth-child(1){background:linear-gradient(135deg, #002A6B, #003D8A)}
+.pillar:nth-child(2){background:linear-gradient(135deg, #003876, #0D4D9F)}
+.pillar:nth-child(3){background:linear-gradient(135deg, #1959A3, #2972C7)}
+.pillar:nth-child(4){background:linear-gradient(135deg, #2A85D8, #4FA3E8)}
+.pillar-no{
+  font-size:13.5px;font-weight:600;
+  opacity:.85;
+  letter-spacing:0.05em;
+  margin-bottom:6px;
+}
+.pillar-h{
+  font-size:18px;font-weight:700;
+  letter-spacing:-0.022em;
+  line-height:1.35;
+  margin:2px 0 10px;
+}
+.pillar-d{
+  font-size:14.5px;font-weight:400;
+  opacity:.92;
+  line-height:1.6;letter-spacing:-0.008em;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.cards-3{grid-template-columns:repeat(3,1fr)}
+.card{
+  padding:28px 26px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  transition:transform .22s,box-shadow .22s,border-color .22s;
+  box-shadow:var(--shadow-sm);
+}
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+  border-color:#B7C2D2;
+}
+.card-ico{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:52px;height:52px;
+  background:var(--primary-soft);
+  border-radius:14px;
+  margin-bottom:16px;
+  font-size:26px;
+  line-height:1;
+}
+.card-h{
+  font-size:20px;font-weight:700;
+  letter-spacing:-0.022em;
+  line-height:1.35;
+  margin-bottom:14px;
+  color:var(--tx);
+}
+.card-list{
+  display:flex;flex-direction:column;gap:10px;
+}
+.card-list li{
+  font-size:16px;
+  color:var(--tx2);
+  letter-spacing:-0.008em;
+  line-height:1.65;
+  padding-left:16px;
+  position:relative;
+  font-weight:500;
+}
+.card-list li::before{
+  content:"";
+  position:absolute;
+  left:0;top:10px;
+  width:6px;height:6px;
+  background:var(--primary);
+  border-radius:50%;
+}
+
+/* ACHIEVE */
+.achieve{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.ach{
+  padding:30px 28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  box-shadow:var(--shadow-sm);
+}
+.ach-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13.5px;font-weight:700;
+  color:var(--primary);
+  background:var(--primary-soft);
+  padding:6px 14px;
+  border-radius:var(--r-pill);
+  letter-spacing:0.02em;
+  margin-bottom:16px;
+}
+.ach-h{
+  font-size:22px;font-weight:800;
+  letter-spacing:-0.025em;
+  line-height:1.4;
+  margin-bottom:16px;
+  color:var(--tx);
+}
+.ach-list{
+  display:flex;flex-direction:column;gap:10px;
+}
+.ach-list li{
+  font-size:16px;font-weight:500;
+  color:var(--tx2);
+  letter-spacing:-0.008em;
+  line-height:1.65;
+  padding-left:16px;
+  position:relative;
+}
+.ach-list li::before{
+  content:"";
+  position:absolute;
+  left:0;top:11px;
+  width:8px;height:2px;
+  background:var(--primary);
+  border-radius:2px;
+}
+
+/* DISTRICT */
+.dist-help{
+  display:flex;align-items:center;gap:10px;
+  background:#FFF8E1;
+  border:1px solid #FFE082;
+  padding:14px 18px;
+  border-radius:var(--r);
+  margin-bottom:20px;
+  font-size:16px;font-weight:600;
+  color:#7C5400;
+  letter-spacing:-0.01em;
+}
+.dist-help span{font-size:20px;line-height:1}
+.dist-bar{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:28px;
+  padding:20px;
+  background:#fff;
+  border-radius:var(--r);
+  border:1px solid var(--line);
+}
+.dist-chip{
+  padding:11px 18px;
+  font-size:16px;font-weight:600;
+  background:transparent;
+  border:1.5px solid var(--line);
+  cursor:pointer;
+  letter-spacing:-0.008em;
+  color:var(--tx);
+  transition:all .18s;
+  border-radius:var(--r-pill);
+  min-height:44px;
+}
+.dist-chip:hover{
+  border-color:var(--primary);
+  color:var(--primary);
+  background:var(--primary-soft);
+}
+.dist-chip.active{
+  background:var(--primary);
+  border-color:var(--primary);
+  color:#fff;
+  box-shadow:0 2px 8px rgba(0,78,162,.3);
+}
+.dist-panel{
+  background:#fff;
+  padding:34px 32px;
+  border-radius:var(--r-lg);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.dist-panel-h{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:24px;
+  padding-bottom:20px;
+  border-bottom:2px solid var(--primary-soft);
+  flex-wrap:wrap;
+  gap:12px;
+}
+.dist-panel-h h3{
+  font-size:30px;font-weight:800;
+  letter-spacing:-0.032em;
+  color:var(--primary);
+}
+.dist-panel-h span{
+  font-size:14px;font-weight:600;
+  color:var(--primary);
+  letter-spacing:0.02em;
+  background:var(--primary-soft);
+  padding:6px 14px;
+  border-radius:var(--r-pill);
+}
+.dist-list{
+  display:flex;flex-direction:column;gap:14px;
+  counter-reset:dist;
+}
+.dist-list li{
+  font-size:17px;font-weight:500;
+  color:var(--tx);
+  letter-spacing:-0.01em;
+  line-height:1.7;
+  padding-left:42px;
+  position:relative;
+  counter-increment:dist;
+}
+.dist-list li::before{
+  content:counter(dist);
+  position:absolute;
+  left:0;top:2px;
+  font-size:14px;font-weight:700;
+  color:#fff;
+  background:var(--primary);
+  width:28px;height:28px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  letter-spacing:0;
+}
+
+/* VOTE */
+.vote{
+  background:
+    radial-gradient(80% 60% at 100% 0%, rgba(255,216,74,.08), transparent 60%),
+    linear-gradient(135deg, #08153A 0%, #0B1F4F 100%);
+  color:#fff;
+  padding:64px var(--pad-x) 72px;
+}
+.vote-inner{max-width:var(--max);margin:0 auto}
+.vote-eyebrow{
+  display:inline-block;
+  font-size:13px;font-weight:700;
+  color:#FFD84A;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  padding:6px 14px;
+  background:rgba(255,216,74,.12);
+  border-radius:var(--r-pill);
+}
+.vote-h{
+  font-size:34px;font-weight:800;
+  letter-spacing:-0.035em;
+  line-height:1.3;
+  margin-bottom:40px;
+  color:#fff;
+}
+.vote-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.vote-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  padding:32px 28px;
+  border-radius:var(--r-lg);
+  backdrop-filter:blur(8px);
+}
+.vote-card-tag{
+  display:inline-block;
+  font-size:13px;font-weight:700;
+  letter-spacing:0.12em;
+  color:#FFD84A;
+  background:rgba(255,216,74,.14);
+  padding:6px 14px;
+  border-radius:var(--r-pill);
+  margin-bottom:16px;
+}
+.vote-card-date{
+  font-size:28px;font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1.3;
+  margin-bottom:12px;
+  color:#fff;
+}
+.vote-card-time{
+  font-size:17px;font-weight:500;
+  color:rgba(255,255,255,.82);
+  letter-spacing:-0.008em;
+  line-height:1.65;
+}
+.vote-note{
+  margin-top:24px;
+  padding:22px 24px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r);
+  font-size:16px;font-weight:500;
+  color:rgba(255,255,255,.88);
+  letter-spacing:-0.008em;
+  line-height:1.75;
+}
+
+/* FOOTER */
+.ft{
+  padding:40px var(--pad-x) 56px;
+  background:#fff;
+  text-align:center;
+  border-top:1px solid var(--line);
+}
+.ft-cr{
+  font-size:14px;font-weight:500;
+  color:var(--tx3);
+  letter-spacing:-0.005em;
+  line-height:1.75;
+  max-width:600px;
+  margin:0 auto;
+}
+.ft-cr a{
+  color:var(--primary);
+  font-weight:700;
+}
+
+/* RESPONSIVE */
+@media(max-width:720px){
+  :root{--pad:18px}
+  html{font-size:17px}
+  .hero{padding:44px var(--pad-x) 52px}
+  .hero-h{font-size:36px;letter-spacing:-0.03em}
+  .hero-sub{font-size:17.5px;line-height:1.75}
+  .hero-chip{font-size:14px;padding:8px 14px}
+  .hero-tag{font-size:17px}
+  .hero-no{font-size:15px}
+  .sec{padding:52px var(--pad-x) 60px}
+  .sec-h{font-size:28px;letter-spacing:-0.03em;line-height:1.3}
+  .sec-desc{font-size:16.5px;line-height:1.8}
+  .sec-eyebrow{font-size:12.5px}
+  .cards,.cards-3{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr;gap:10px}
+  .pillar{padding:22px 18px}
+  .pillar-h{font-size:16px}
+  .pillar-d{font-size:13.5px}
+  .achieve{grid-template-columns:1fr}
+  .ach{padding:26px 22px}
+  .ach-h{font-size:20px}
+  .ach-list li{font-size:15.5px}
+  .card{padding:26px 22px}
+  .card-h{font-size:18.5px}
+  .card-list li{font-size:15.5px;line-height:1.7}
+  .card-ico{width:48px;height:48px;font-size:24px}
+  .vote-grid{grid-template-columns:1fr}
+  .vote{padding:52px var(--pad-x) 60px}
+  .vote-h{font-size:28px}
+  .vote-card{padding:28px 24px}
+  .vote-card-date{font-size:24px}
+  .vote-card-time{font-size:16px;line-height:1.7}
+  .vote-note{font-size:15px;padding:18px 20px}
+  .info{grid-template-columns:96px 1fr;font-size:15.5px;padding:24px 22px;gap:12px 18px}
+  .tab{padding:12px 16px;font-size:15px;margin:8px 2px;min-height:44px}
+  .tabs-inner{padding:0 8px}
+  .dist-panel{padding:28px 22px}
+  .dist-panel-h h3{font-size:24px}
+  .dist-panel-h span{font-size:13px}
+  .dist-list li{font-size:16px;padding-left:38px;line-height:1.7}
+  .dist-list li::before{width:26px;height:26px;font-size:13px}
+  .dist-chip{font-size:15px;padding:10px 16px}
+  .dist-help{font-size:15px;padding:14px 16px}
+  .quote{padding:32px 24px}
+  .quote p{font-size:17.5px;line-height:1.85}
+  .quote::before{width:38px;height:38px;top:20px;left:20px}
+}
+@media(max-width:480px){
+  .hero-h{font-size:30px}
+  .sec-h{font-size:25px}
+  .vote-h{font-size:25px}
+  .pillar-h{font-size:15px}
+  .pillar-d{font-size:13px}
+  .ach-h{font-size:18.5px}
+  .card-h{font-size:17.5px}
+  .info{grid-template-columns:84px 1fr;font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-no">
+      <span class="hero-no-num">1</span>
+      <span>더불어민주당</span>
+    </div>
+    <p class="hero-tag">하나씩 착착!</p>
+    <h1 class="hero-h">일 잘하는<br><span class="accent">서울시장</span> 정원오</h1>
+    <p class="hero-sub">시민의 불편과 싸우는, 말보다 결과로 증명하는 행정. 세금을 시민의 삶에 쓰겠습니다.</p>
+    <div class="hero-meta">
+      <span class="hero-chip">민선 6·7·8기 성동구청장</span>
+      <span class="hero-chip">3선 행정가</span>
+      <span class="hero-chip">한양대 도시대학원 박사 수료</span>
+    </div>
+  </div>
+</section>
+
+<!-- TAB -->
+<nav class="tabs" id="tabs">
+  <div class="tabs-inner">
+    <button class="tab active" data-target="intro"><span class="emoji-src">🙋</span> 인사말</button>
+    <button class="tab" data-target="record"><span class="emoji-src">🏆</span> 성과</button>
+    <button class="tab" data-target="vision"><span class="emoji-src">🌏</span> 비전</button>
+    <button class="tab" data-target="chakchak"><span class="emoji-src">✅</span> 착착 공약</button>
+    <button class="tab" data-target="saejung"><span class="emoji-src">💰</span> 세아정</button>
+    <button class="tab" data-target="district"><span class="emoji-src">📍</span> 자치구별</button>
+    <button class="tab" data-target="vote"><span class="emoji-src">🗳️</span> 투표</button>
+  </div>
+</nav>
+
+<!-- 1. 인사말 -->
+<section class="sec" id="intro">
+  <div class="sec-in">
+    <span class="sec-eyebrow">Greeting</span>
+    <h2 class="sec-h">시민의 불편과<br>싸우는 서울시장</h2>
+
+    <div class="quote">
+      <div class="quote-body">
+        <p>서울시장은 대권을 향한 자리가 아닙니다. <em>시민의 삶을 지키는 자리</em>입니다.</p>
+        <p>우리가 싸워야 할 것은 상대방이 아니라 시민의 불편함입니다. 우리가 서 있어야 할 곳은 정쟁의 한복판이 아니라 <em>시민의 삶 한복판</em>입니다.</p>
+        <p>말보다 결과로, 성과로 증명하는 행정. 시민이 체감하는 변화를 만들겠습니다. <em>세금을 시민의 삶에 쓰겠습니다.</em></p>
+      </div>
+    </div>
+
+    <dl class="info">
+      <dt>이름</dt><dd>정원오 (鄭源伍)</dd>
+      <dt>생년월일</dt><dd>1968. 8. 12. (만 57세)</dd>
+      <dt>소속</dt><dd>더불어민주당</dd>
+      <dt>학력</dt><dd>한양대학교 도시대학원 도시개발경영전공 박사 수료</dd>
+      <dt>주요 경력</dt><dd>민선 6·7·8기 성동구청장 (3선)<br>한양대학교 경영대학 특임교수<br>더불어민주당 이재명 당대표 자치분권 특보</dd>
+      <dt>선거사무소</dt><dd>서울특별시 중구 세종대로 47-1</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- 2. 성과 -->
+<section class="sec sec-alt" id="record">
+  <div class="sec-in">
+    <span class="sec-eyebrow">Track Record</span>
+    <h2 class="sec-h">압도적 성과로<br>증명했습니다</h2>
+    <p class="sec-desc">성동구청장 재임 12년간 만든 변화는 국가 표준이 됐습니다. 성동구에서 만든 전국 최초 정책들이 이듬해 국회를 통과했습니다.</p>
+
+    <div class="achieve">
+      <div class="ach">
+        <span class="ach-tag"><span class="emoji-src">🌍</span> 혁신가</span>
+        <h3 class="ach-h">성수를 세계적 핫플레이스로</h3>
+        <ul class="ach-list">
+          <li>타임아웃 선정 ‛세계에서 가장 아름다운 동네 4위' (2024)</li>
+          <li>서울 외국인 카드 소비의 24.5% 차지 (2025 하반기, 서울 1위)</li>
+          <li>K-뷰티·K-패션·K-팝, K-라이프스타일의 메카</li>
+          <li>전국 최초 젠트리피케이션 방지 정책으로 소상공인 보호</li>
+        </ul>
+      </div>
+
+      <div class="ach">
+        <span class="ach-tag"><span class="emoji-src">😊</span> 리더</span>
+        <h3 class="ach-h">시민의 행복을 목표로 삼은 행정</h3>
+        <ul class="ach-list">
+          <li>성동구 행복지수 성장률 1위 (2013 대비 2023, 서울서베이)</li>
+          <li>성동구 전반적 삶의 만족도 1위 (2025, 서울서베이)</li>
+        </ul>
+      </div>
+
+      <div class="ach">
+        <span class="ach-tag"><span class="emoji-src">📱</span> 정책가</span>
+        <h3 class="ach-h">직통 문자 소통의 원조</h3>
+        <ul class="ach-list">
+          <li>연평균 약 7,000건 접수 (구청장 재임 중)</li>
+          <li>전국 최초 65세 이상 대상포진 무료 예방 접종</li>
+          <li>주차안심번호서비스 도입, 아픈아이 병상 돌봄 서비스</li>
+        </ul>
+      </div>
+
+      <div class="ach">
+        <span class="ach-tag"><span class="emoji-src">📜</span> 검증된 실력가</span>
+        <h3 class="ach-h">성동의 변화를 국가 표준으로</h3>
+        <ul class="ach-list">
+          <li>필수노동자 보호 조례(2020) → 필수업무 종사자 보호지원법(2021)</li>
+          <li>젠트리피케이션 방지 조례(2015) → 지역상권 상생활성화법(2021)</li>
+          <li>소셜벤처 육성 조례(2017) → 벤처기업육성 특별법(2021)</li>
+          <li>경력보유여성 존중 조례(2021) → 여성 경제활동 촉진법(2025)</li>
+          <li>반지하 전수조사(2022) → 서울시 전수조사(2023) → 인구주택총조사 첫 반영(2025)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 비전 -->
+<section class="sec" id="vision">
+  <div class="sec-in">
+    <span class="sec-eyebrow">Vision</span>
+    <h2 class="sec-h">아시아 수도,<br>글로벌 G2 도시 서울</h2>
+    <p class="sec-desc">시민이 원하는 도시, 세계가 부러워하는 도시. 1대 목표 아래 2대 미래혁신도심, 3대 창업클러스터, 4대 특구 파이프라인을 작동시킵니다.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-no">1대 목표</span>
+        <h3 class="pillar-h">아시아 최고 서울</h3>
+        <p class="pillar-d">뉴욕·도쿄와 경쟁하는 G2 수도</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-no">2대 미래혁신도심</span>
+        <h3 class="pillar-h">신촌·홍대, 청량리·왕십리</h3>
+        <p class="pillar-d">기존 3도심을 5도심 체제로</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-no">3대 창업클러스터</span>
+        <h3 class="pillar-h">신촌·청량리·관악</h3>
+        <p class="pillar-d">청년창업거점, 신성장엔진 가동</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-no">4대 특구</span>
+        <h3 class="pillar-h">홍릉·양재·구로·용산</h3>
+        <p class="pillar-d">신성장동력 거점, 성과를 세계로</p>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">📈</span></div>
+        <h3 class="card-h">착착투자</h3>
+        <ul class="card-list">
+          <li>반도체·AI·Bio·Culture 벤처 투자 활성화</li>
+          <li>UN 주축 글로벌 AI허브 유치</li>
+          <li>홍릉·상계 바이오 R&D 핵심거점</li>
+          <li>창동·상암·잠실 K-아레나 조성</li>
+          <li>여의도 국제금융중심지</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🚀</span></div>
+        <h3 class="card-h">착착창업</h3>
+        <ul class="card-list">
+          <li>창업도전캠퍼스 매년 1,000명 배출</li>
+          <li>창업도전수당 월 100만 원</li>
+          <li>첫출발지원금 최대 4,000만 원</li>
+          <li>청년창업펀드 1,000억 원 조성</li>
+          <li>서울창업경험은행으로 실패 자산화</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">✈️</span></div>
+        <h3 class="card-h">착착관광</h3>
+        <ul class="card-list">
+          <li>방한 관광객 3,000만 명 목표</li>
+          <li>제2의 성수동 20곳 조성</li>
+          <li>산·강·궁·길 체류형 관광</li>
+          <li>관광객 원패스(One Pass) 도입</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🚇</span></div>
+        <h3 class="card-h">착착교통</h3>
+        <ul class="card-list">
+          <li>격자형(#) 철도망으로 멈춘 사업 정상화</li>
+          <li>5분 정류장·10분 역세권</li>
+          <li>유연근무제 확대로 시간 돌려주기</li>
+          <li>K-모두의기후동행카드 도입</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🏗️</span></div>
+        <h3 class="card-h">착착개발</h3>
+        <ul class="card-list">
+          <li>2031년까지 36만 호 이상 착공</li>
+          <li>절차 통합으로 최대 10년 이내 단축</li>
+          <li>500세대 미만은 자치구 권한 이양</li>
+          <li>시장 직속 정비사업 매니저 파견</li>
+          <li>부담가능한 실속주택 공급</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 착착 공약 -->
+<section class="sec sec-alt" id="chakchak">
+  <div class="sec-in">
+    <span class="sec-eyebrow">Chak-Chak Promise</span>
+    <h2 class="sec-h">서울을 착착<br>바꿔가겠습니다</h2>
+    <p class="sec-desc">시민 모두가 행복한 내일을 위한 9개 분야 정책. 사후 복구가 아닌 선제적 예방, 보여주기가 아닌 실제로 바꾸는 행정.</p>
+
+    <div class="cards cards-3">
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🛡️</span></div>
+        <h3 class="card-h">착착 안전</h3>
+        <ul class="card-list">
+          <li>사후 복구에서 선제적 예방투자로</li>
+          <li>4단계 기상재난 통합대응체계 구축</li>
+          <li>AI 통합 안전지도 고도화</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">❤️</span></div>
+        <h3 class="card-h">착착 복지</h3>
+        <ul class="card-list">
+          <li>서울형 통합돌봄: 안전한 주거부터 스마트 헬스케어까지</li>
+          <li>AI 기반 복지자동신청 시스템 구축</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">⚡</span></div>
+        <h3 class="card-h">착착 에너지</h3>
+        <ul class="card-list">
+          <li>에너지전환 지원센터 설치</li>
+          <li>재생에너지 A/S까지 지원</li>
+          <li>공공부문 냉난방 히트펌프 전환</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">👷</span></div>
+        <h3 class="card-h">착착 노동</h3>
+        <ul class="card-list">
+          <li>프리랜서·1인 자영업자 서울형 유급병가 확대</li>
+          <li>서울형 노동시간 단축 시범사업</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🛒</span></div>
+        <h3 class="card-h">착착 소상공인</h3>
+        <ul class="card-list">
+          <li>1시장 1명 상권성장 매니저 파견</li>
+          <li>서울형 브랜드 상권 20곳 육성</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">👨‍👩‍👧</span></div>
+        <h3 class="card-h">착착 4050</h3>
+        <ul class="card-list">
+          <li>4050+센터 설립: 일자리 재교육, 금융교육</li>
+          <li>이중돌봄 중·장년에 사회적 처방</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">👩</span></div>
+        <h3 class="card-h">착착 여성</h3>
+        <ul class="card-list">
+          <li>여성 커리어 지속망 구축</li>
+          <li>돌봄경력 인정·경력설계 맞춤 지원</li>
+          <li>든든앱 구축 및 범죄 예방 인프라</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">📚</span></div>
+        <h3 class="card-h">착착 교육</h3>
+        <ul class="card-list">
+          <li>다시 일어설 힘을 주는 평생학습 체계</li>
+          <li>독서 서울 생태계 구축</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">♻️</span></div>
+        <h3 class="card-h">착착 환경</h3>
+        <ul class="card-list">
+          <li>종량제 쓰레기 소각·매립량 구조적 감량</li>
+          <li>재활용품 처리 체계 혁신, 쓰레기 자원화</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🐾</span></div>
+        <h3 class="card-h">착착 반려동물</h3>
+        <ul class="card-list">
+          <li>서울동물복지거점센터 중심 권역별 의료체계</li>
+          <li>수의진료 표준수가제 단계적 도입</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 세아정 -->
+<section class="sec" id="saejung">
+  <div class="sec-in">
+    <span class="sec-eyebrow">Sae · A · Jeong</span>
+    <h2 class="sec-h">세금이 아깝지 않은 정책<br>세 · 아 · 정</h2>
+    <p class="sec-desc">시민의 문자 한 통, 제안 하나하나를 허투루 넘기지 않고 정책으로 바꾸겠습니다. 보여주기 행정이 아니라 실제로 바꾸는 행정.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🚌</span></div>
+        <h3 class="card-h">출근길은 더 편하게</h3>
+        <ul class="card-list">
+          <li>더 가까운 지하철 출구 역사 조성</li>
+          <li>지하철 끊긴 시간, 노선 그대로 심야버스</li>
+          <li>동일노선 재승차 무료 제도 추진</li>
+          <li>출퇴근 시간대 공간확장형 객차 도입</li>
+          <li>승강장 스마트 쉼터 조성</li>
+          <li>교통 소외지역 지역맞춤형 교통수단</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">👦</span></div>
+        <h3 class="card-h">아이와 보행자는 더 안전하게</h3>
+        <ul class="card-list">
+          <li>서울형 워킹스쿨버스 도입</li>
+          <li>보행자·자전거 안전 산책로 조성</li>
+          <li>초등학생 현장체험학습 안전요원 배치</li>
+          <li>특수 볼라드·안전펜스 확대</li>
+          <li>놀이터 미세먼지 알리미 설치</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🏘️</span></div>
+        <h3 class="card-h">동네 생활은 더 편리하게</h3>
+        <ul class="card-list">
+          <li>주요 거점 물품보관함 확충</li>
+          <li>24시간 스마트도서관 확대</li>
+          <li>홈케어 생활민원기동대 가동</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🎓</span></div>
+        <h3 class="card-h">청년의 시작은 더 가볍게</h3>
+        <ul class="card-list">
+          <li>청년 면접 비용 지원 (1회당 5만 원)</li>
+          <li>웨딩 스·드·메 가격 투명 공개</li>
+          <li>군 복무 청년 상해보험 강화</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-ico"><span class="emoji-src">🤝</span></div>
+        <h3 class="card-h">누구에게나 도움이 되게</h3>
+        <ul class="card-list">
+          <li>소상공인 가게 냉·난방기 청소 지원</li>
+          <li>주차 가능한 개방화장실 정보 공유</li>
+          <li>전통시장 드라이브 스루 도입</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 자치구별 -->
+<section class="sec sec-alt" id="district">
+  <div class="sec-in">
+    <span class="sec-eyebrow">District</span>
+    <h2 class="sec-h">서울 모든 구를<br>구석구석까지 촘촘하게</h2>
+    <p class="sec-desc">25개 자치구마다 7개 핵심 공약을 준비했습니다.</p>
+
+    <div class="dist-help">
+      <span class="emoji-src">👉</span>
+      <span>아래에서 내 동네를 눌러보세요</span>
+    </div>
+
+    <div class="dist-bar" id="distBar"></div>
+    <div id="distPanel"></div>
+  </div>
+</section>
+
+<!-- 7. 투표 -->
+<section class="vote" id="vote">
+  <div class="vote-inner">
+    <span class="vote-eyebrow">Vote</span>
+    <h2 class="vote-h">투표는 내일의 시작입니다</h2>
+
+    <div class="vote-grid">
+      <div class="vote-card">
+        <span class="vote-card-tag">사전투표</span>
+        <div class="vote-card-date">5월 29일(금)<br>5월 30일(토)</div>
+        <p class="vote-card-time">오전 6시 ~ 오후 6시<br>전국 모든 사전투표소에서 투표</p>
+      </div>
+      <div class="vote-card">
+        <span class="vote-card-tag">본투표</span>
+        <div class="vote-card-date">6월 3일(수)</div>
+        <p class="vote-card-time">오전 6시 ~ 오후 6시<br>내 주소지 투표소에서 투표</p>
+      </div>
+    </div>
+
+    <p class="vote-note"><span class="emoji-src">📋</span> 준비물: 주민등록증, 운전면허증 등 사진이 부착된 신분증<br><span class="emoji-src">📍</span> 내 투표소 확인: 중앙선거관리위원회 (☎ 1390)</p>
+  </div>
+</section>
+
+<footer class="ft">
+  <p class="ft-cr">본 페이지는 2026 서울특별시장 선거 정원오 후보 책자형 선거공보를 토대로 재구성한 자료입니다.<br>공식 정보는 <a href="https://www.nec.go.kr" target="_blank" rel="noopener">중앙선거관리위원회</a>를 참고하시기 바랍니다.</p>
+</footer>
+
+<!-- Twemoji -->
+<script src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script>
+const districts = {
+  "종로구":["서촌 세종대왕 탄생지 기념관 추진","숭인공영주차장 부지에 종로 제2청사 설립","관광밀집구역 스마트 횡단보도 등 교통안전 확보","도시철도 강북횡단선 재추진","종로구청사 생활 인프라·복합문화공간으로 신축","대학로 공공창작공간 확충, 예술인·소극장 및 작품 지원","종로 전통시장 실시간 통합 주차정보 시스템 추진"],
+  "중구":["약수동·필동·소공동 등 청소년·주민 복합문화 인프라 확충","중구청·중구의회 이전하고 복합문화센터 설립","민관·기업 연계 지역경영모델(타운매니지먼트) 도입","남산 벨트·보행 중심 도시 재구조화로 글로벌 문화관광 1번지","용적률 거래제 도입 추진·고도제한 완화 검토","전 세대 돌봄: 공공 초등돌봄·24시 소아진료, 중·노년 맞춤케어","재난안전시스템·교통체계·통학로 위험제로 도심 구현"],
+  "용산구":["G2 핵심 거점: 용산정비창 국제업무지구 신속 개발","구민종합체육관·파크골프장 등 생활체육시설 추진","용산국가공원을 온전한 국가 생태공원으로 조성","용산 전자상가를 미래 첨단산업 거점으로 육성","효창공원 시민친화 공간 조성","이태원 관광특구 인파관리 시스템, 상권 재도약 지원","철도 단계적 지하화 추진: 경부선·경의중앙선·경원선 등"],
+  "성동구":["성수·왕십리 도심 지정: G2 서울 핵심 성장축으로","구청·의회·교육·경찰 통합 신행정타운 건설","성수 IT·유통지구 확장: AI·패션·문화 창업 클러스터","반다비 체육센터·발달장애인 자립생활주택·무장애 환경 확대","서울숲 일대 복합문화예술관 건립 등 공간 개편","마장동 한전부지 기부채납 활용 생활 인프라 확충","성수·서울숲 서울형 크리에이티브 스테이 도입 추진"],
+  "광진구":["어린이대공원 후문 복합개발 추진: 주차·문화·체육·컨벤션","공공산후조리원·통합돌봄·공공목욕탕 All-Care센터 신설 추진","어린이대공원·아차산 일대 종상향 검토 및 계획적 개발","주민 의견 반영된 동서울터미널 현대화 신속 추진","전 구청사 부지, 세대통합 커뮤니티·수영장·도서관 복합개발 추진","화양초 유휴부지 교육·도서관 복합거점 조성 추진","중곡역·광나루역 에스컬레이터 설치 추진"],
+  "동대문구":["동부선·수인분당선·면목선·강북횡단선 추진","전농동 서울시립도서관 원안대로 건설 추진","수변문화 벨트: 5개동 힐링코스·휘경유수지 문화거점 조성","답십리 간데메공원·고미술상가 연계 명소화","장안동 대공분실, 국민주권기념관으로 추진","청량리·제기전통시장 주차장·보행로 확대 및 관광콘텐츠 지원","청량리 청소년 종합수련관 건립 추진"],
+  "중랑구":["면목선 도시철도 조기 착공","GTX-B 노선 조기 완공","면목행정복합타운 개발 조기 착공","사가정도서관·용마산천문과학관·서울상상나라로 교육특구 추진","신내차량기지 이전 + 첨단 산업단지 개발 추진","SH본사 이전 신속 추진","망우역사문화공원, 근현대사 역사문화 공간 브랜드화 추진"],
+  "성북구":["내부순환로·북부간선도로 지하화 추진","보문동 (구)동대문세무서 부지 결합개발로 복합체육문화센터 조성","정릉공영차고지 복합문화 체육공간 조성 추진","석계민방위훈련장 자원순환복합센터+문화·체육 복합시설로 개발 추진","월곡 공공산후조리원·복합복지시설 설립 추진","석관동 한예종 주변 대학로 및 우이천 수변 공연장 조성 추진","종로~성북~동북권 문화관광벨트 성북 거점 조성"],
+  "강북구":["신강북선을 강남 직결 동부선으로 업그레이드해 신설","오현적환장 지하화해 체육문화센터로 복합개발 추진","북서울꿈의숲 재조성해 동북권 랜드마크로 추진","시립 강북어린이병원 계속 추진","서울영어마을 수유캠프에 ‛강북스포츠파크' 조성 추진","인수동 공영주차장 부지에 시립 강북공공도서관 건립 추진","4호선 미아사거리·미아·수유역 승강편의시설 설치 추진"],
+  "도봉구":["창동 K-POP 문화관광특구 조성 추진","착착개발: 창동·쌍문·방학·도봉 신 주거벨트 완성","경원선·1호선 단계적 지하화 추진","우이방학 경전철 조속 완공·방학~마들 연결 추진","소방학교·화학부대 이전부지 등 공공부지 신속개발","도봉구민회관 문화시설 복합개발 추진","방학동 시립도서관 정상화 + 창동 청년문화시설 복합개발 추진"],
+  "노원구":["창동차량기지 일대 서울 디지털바이오시티(S-DBC) 조성","GTX-C 조기완공, SRT·동북선 연장, 경원선 지하화 추진","광운대역세권 미래복합도시 조속 완성","당현천 상류 구간 복원 및 중랑천 수변문화공원 조성","북부법조단지 청년·생활·체육 복합허브 조성 추진","4호선 지상구간(노원역~불암산역) 태양광 방음터널 설치 추진","하천+산+공원 연계 ‛노원가든라인' 구축 및 지역축제 활성화"],
+  "은평구":["서울혁신파크, 첨단공연장·광장녹지가 어우러진 복합시설로 재편","수색차량기지 이전 + 수색~DMC역 일대 복합개발 추진","불광천 제방 위 숲길 공원, 수변감성 상점가 조성 추진","진관동 빙상장 및 다목적체육관 조속 추진","고양신사선 신설 추진","녹번응암 지역 중학교 신설 지원","진관동 부지 서울시 공공재활병원 추진"],
+  "서대문구":["서대문도서관 전면 개축 및 안산 연계 도서관공원 조성 지원","신촌 K-컬처 특화거리 조성 및 문화산업진흥지구 지정 추진","연희권역 테마별 특화마을 조성: 제2의 성수·연남 상권","서대문형무소 역사관 유네스코 세계유산 등록 및 지하주차장 확충 추진","서울형 달빛어린이병원 관내 지정 추진","안산·북한산·홍제천·불광천 생태축 복원 및 복합문화공간 조성","유진상가·인왕시장 복합개발로 서대문 랜드마크화 추진"],
+  "마포구":["문화비축기지 DMC문화벨트 거점화: 시민이 누리는 공간 재설계","경의선숲길 반려동물 테마파크 조성 추진","홍대~합정~망원~한강 ‛홍대 르네상스' 문화벨트 조성","마포 안전체험관 건립 추진","서부면허시험장 부지에 주민 편의시설 유치 지원","신안산선 만리재역 신설 추진","한강 녹지 연결 초록길 조성 추진: 한강공원 접근성 개선"],
+  "양천구":["착착개발: 목동·신월·신정 등 재건축·재개발 조속 추진","목동선·강북횡단선 재추진","신월IC 국회대로 상부공원과 연계한 덮개공원 + 지하주차장 적극 검토","신정차량기지 이전 검토","양천형 마을버스 지원으로 자주, 구석구석 + 공공버스 도입","안양천로 덮개공원: 안양천 보도·녹지 연결 추진","신월3동 공영주차장 부지 복합 개발 추진"],
+  "강서구":["김포공항 고도제한 완화 + UAM 클러스터 복합개발 추진","현 강서구청 부지 복합문화시설 건립 및 주변 상권 활성화 추진","구 시민청 부지 ‛강서 MCT 시민플라자' 건립 추진","마곡 ‛리서치타운 프로젝트': 강소기업 R&D 혁신거점","대장홍대선·강북횡단선 바로! 신정지선·목동선 연장 구간 역사 신설 추진","착착개발: 국회대로·화곡·가양·등촌·방화·염창 재건축·재개발","서서울문화플라자 조속한 건립"],
+  "구로구":["지상철도 지하화 단계적 추진 + 상부공간 주택 공급 검토","신구로선(항동~고척) 신설 추진","신도림유수지 내 문화·여가 복합개발 추진","온수공단을 첨단산업 클러스터로 재편","2호선 태양광 방음벽 설치, 장기적 지하화 추진","구로차량기지 이전 재추진","개봉동 너른뜰 주거환경 개선 사업 지원"],
+  "금천구":["금천구청역 일대 복합역사 개발 및 청년 주거 확충 추진","공군부대 부지 주거·업무·여가 복합개발 신속 추진","구로·가산 G2 AI 테스트베드·리빙랩 특구 지정","신안산선 조기 개통·난곡선 추진·경부선 지하화 추진","G밸리 수출의다리 일대 교통문제 개선","석수역세권 일대 개발 및 철재상가 현대화 추진","금천형 마을버스 지원으로 자주, 구석구석 + 공공버스 도입"],
+  "영등포구":["여의도 금융특구·K-글로벌센터 조성, 아시아의 맨해튼으로","영등포 원스톱 행정복합타운: 공공서비스 허브","대방천·도림천·안양천을 문화가 흐르는 생태하천으로 조성","문래동 제2세종문화회관 원안 복구 및 여의도 아트센터 건립 추진","문래동 기계금속단지: AI 4차산업·주민친화 복합공간으로","대림동 남부도로사업소 이전, 복합문화시설 조성 추진","도림보도육교·도림고가E/V·신길메낙골 보행환경 개선 추진"],
+  "동작구":["동작대로·도림천변 침수대응 + AI재난대응센터 건립","동작·관악 공동 보라매자원순환센터 조속 건립","중앙대~숭실대~총신대 연계 혁신성장구역 지정 추진","남부장애인종합복지관 동작자립성장 허브 전환 및 시설 확충 추진","노량진 수협부지와 수도자재센터를 연계한 고밀도 개발 추진","흑석동 빗물펌프장 이전 + 한강 수변연계 편의시설 추진","관내 대학의 대학생을 위한 상생학사(마을형 기숙사) 협약 추진"],
+  "관악구":["서울창업허브관악·낙성대 벤처창업 거점시설 신속 추진","난곡선 조기 착공·서부선 재추진","서울 3대 청년창업 클러스터 관악캠퍼스 조성","관악산 자연휴양림·관악산 하늘숲길 조성 추진","봉천천 복원과 별빛내린천 친수공간 조성 추진","관악체육복합타운·신봉터널 상부 복합체육시설 조속 추진","(구)금천경찰서 부지 ‛관악문화프라자' 신속 추진"],
+  "서초구":["양재 ‛G2 AI·딥테크 고도화 특구' 조성","경부고속도로 단계적 지하화 + 상부에 서초복합레저파크 조성 추진","착착개발: 반포·잠원지구 및 소규모 사업장 맞춤형 재건축 신속 추진","자동 차수판·스마트 빗물받이·싱크홀 예방 등 AI 안전관리","양재 만남의광장에 광역환승터미널 신설해 도심 체증 예방","예술의전당~남부터미널 문화예술 관광특구 지정 추진","내곡동 복합복지타운 고령친화 공간으로 조속 설립"],
+  "강남구":["착착개발: 압구정·대치·개포 등 재건축·재개발 신속 추진","테헤란로·삼성·코엑스 MICE 글로벌 고도화","GTX·위례신사선 조기착공, 위례과천선 역사 신설 추진","빗물터널 완공·AI 대응체계 마련으로 수해 안전","영동대로 지하공간 복합개발 조기 완공","수서 K-컬처 전시관 설립 적극 검토","(구)청담고 부지 시니어 라이프캠퍼스 대표 거점 조성 추진"],
+  "송파구":["송파~위례 AI·R&D 혁신축: 디지털·교육특구 통합 추진","풍납토성 한성백제 역사문화도시 조성: 조기보상·정주환경 개선","잠실 관광특구 및 MICE 글로벌 미디어로드 조성","책박물관 주차장 및 옛 성동구치소 문화체육복합시설 건립 추진","위례신사선 조기 착공·위례과천선(연장선 포함) 추진 등 교통격차 해소","성내천 생태하천 복원·탄천 동측도로 전면 지하화 지상 공원화 추진","위례 서울시립도서관 조속 추진"],
+  "강동구":["GTX-D 강동 경유, 9호선 연장 조기 완공, 5호선 직결화 추진","착착개발: 명일·고덕·길동·천호·성내 등 재건축·재개발","지하철: 천호·상일 혼잡 해소, 강일 접근성, 올파포 연결통로 추진","고덕차량기지 고밀·복합 개발, 고덕비즈밸리 고도화 추진","천호공원 지하 주차장, 구민회관 재건축, 빙상장 등 확충 추진","강동형 마을버스 지원으로 구석구석 + 공공버스 상시 운행","싱크홀 위험지역 최우선 GPR 재탐사·점검"]
+};
+
+const distBar = document.getElementById('distBar');
+const distPanel = document.getElementById('distPanel');
+const distNames = Object.keys(districts);
+
+distNames.forEach((name,idx)=>{
+  const chip = document.createElement('button');
+  chip.className = 'dist-chip' + (idx===0?' active':'');
+  chip.textContent = name;
+  chip.addEventListener('click', ()=>{
+    document.querySelectorAll('.dist-chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    renderDist(name);
+    // 패널로 부드럽게 스크롤
+    const panel = document.getElementById('distPanel');
+    if(panel){
+      const top = panel.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({top, behavior:'smooth'});
+    }
+  });
+  distBar.appendChild(chip);
+});
+
+function renderDist(name){
+  const list = districts[name];
+  distPanel.innerHTML = `
+    <div class="dist-panel">
+      <div class="dist-panel-h">
+        <h3>${name}</h3>
+        <span>7가지 핵심 공약</span>
+      </div>
+      <ol class="dist-list">
+        ${list.map(item=>`<li>${item}</li>`).join('')}
+      </ol>
+    </div>
+  `;
+}
+renderDist(distNames[0]);
+
+function applyTwemoji(){
+  if(typeof twemoji !== 'undefined'){
+    twemoji.parse(document.body, {
+      folder: 'svg',
+      ext: '.svg',
+      className: 'emoji'
+    });
+  }
+}
+window.addEventListener('load', applyTwemoji);
+
+const tabs = document.querySelectorAll('.tab');
+tabs.forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    const target = document.getElementById(tab.dataset.target);
+    if(target){
+      const offset = 68;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({top, behavior:'smooth'});
+    }
+  });
+});
+
+const sections = ['intro','record','vision','chakchak','saejung','district','vote'];
+const tabMap = {};
+tabs.forEach(t=>tabMap[t.dataset.target]=t);
+
+window.addEventListener('scroll', ()=>{
+  let current = sections[0];
+  const scrollPos = window.scrollY + 140;
+  sections.forEach(id=>{
+    const el = document.getElementById(id);
+    if(el && el.offsetTop <= scrollPos) current = id;
+  });
+  tabs.forEach(t=>t.classList.remove('active'));
+  if(tabMap[current]) tabMap[current].classList.add('active');
+
+  const activeTab = tabMap[current];
+  if(activeTab){
+    const tabsInner = document.querySelector('.tabs-inner');
+    const tabRect = activeTab.getBoundingClientRect();
+    const innerRect = tabsInner.getBoundingClientRect();
+    if(tabRect.left < innerRect.left + 20 || tabRect.right > innerRect.right - 20){
+      activeTab.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    }
+  }
+}, {passive:true});
+</script>
+</body>
+</html>
