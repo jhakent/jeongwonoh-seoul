@@ -68,6 +68,7 @@
   "birthDate": "1968-08-12",
   "nationality": "대한민국",
   "sameAs": [
+    "https://www.seouljwo.kr",
     "https://2026win.kr/sub/introduce/view.html?seq=112"
   ]
 }
@@ -1014,6 +1015,29 @@ img.emoji{
 .call-share svg{
   width:20px;height:20px;
 }
+.call-official{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:18px;
+  color:rgba(255,255,255,.92);
+  font-size:15px;font-weight:600;
+  letter-spacing:-0.01em;
+  border-bottom:1px solid rgba(255,255,255,.4);
+  padding-bottom:2px;
+  transition:color .2s, border-color .2s;
+}
+.call-official-wrap{
+  display:block;
+  margin-top:0;
+}
+.call-official:hover{
+  color:#fff;
+  border-color:#fff;
+}
+.call-official svg{
+  width:15px;height:15px;
+  fill:none;stroke:currentColor;
+  stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
+}
 .call-pill{
   display:inline-flex;align-items:center;gap:8px;
   font-size:14.5px;font-weight:600;
@@ -1118,6 +1142,11 @@ img.emoji{
   margin-top:auto;
   padding-top:6px;
 }
+.ft-link-official{
+  background:var(--primary-soft);
+  border-color:var(--primary);
+}
+.ft-link-official .ft-link-desc{color:var(--primary)}
 .ft-cr{
   font-size:13.5px;
   font-weight:500;
@@ -1716,6 +1745,12 @@ img.emoji{
       </svg>
       가족·이웃에게 공유하기
     </button>
+    <div class="call-official-wrap">
+      <a href="https://www.seouljwo.kr" target="_blank" rel="noopener" class="call-official">
+        정원오 후보 공식 홈페이지 바로가기
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1746,10 +1781,10 @@ img.emoji{
   <div class="ft-inner">
     <h3 class="ft-h">공식 정보 더 보기</h3>
     <div class="ft-link-grid">
-      <a href="https://2026win.kr/sub/introduce/view.html?seq=112" target="_blank" rel="noopener" class="ft-link">
-        <span class="ft-link-tag">더불어민주당 공식</span>
-        <span class="ft-link-title">정원오 후보 소개</span>
-        <span class="ft-link-desc">2026WIN 후보자 페이지<br>공약·프로필·미디어</span>
+      <a href="https://www.seouljwo.kr" target="_blank" rel="noopener" class="ft-link ft-link-official">
+        <span class="ft-link-tag">정원오 공식</span>
+        <span class="ft-link-title">정원오 공식 홈페이지</span>
+        <span class="ft-link-desc">지역구 공약·정책 카드뉴스<br>일정·미디어 등 풍부한 자료</span>
       </a>
       <a href="https://www.nec.go.kr" target="_blank" rel="noopener" class="ft-link">
         <span class="ft-link-tag">선거 공식</span>
@@ -1767,7 +1802,7 @@ img.emoji{
         <span class="ft-link-desc">주소지 기준 지정 투표소<br>본투표일 전용</span>
       </a>
     </div>
-    <p class="ft-cr">본 페이지는 정원오 후보의 정책을 한눈에 정리한 비공식 공약집입니다. 2026 서울특별시장 선거 정원오 후보의 공식 책자형 선거공보를 토대로 서울시민이 자발적으로 재구성한 자료이며, 캠프와는 무관합니다. 공식 정보는 <a href="https://www.nec.go.kr" target="_blank" rel="noopener">중앙선거관리위원회</a> 및 <a href="https://2026win.kr/sub/introduce/view.html?seq=112" target="_blank" rel="noopener">더불어민주당 후보 소개 페이지</a>를 참고하시기 바랍니다.</p>
+    <p class="ft-cr">본 페이지는 정원오 후보의 정책을 한눈에 정리한 비공식 공약집입니다. 2026 서울특별시장 선거 정원오 후보의 공식 책자형 선거공보를 토대로 서울시민이 자발적으로 재구성한 자료이며, 캠프와는 무관합니다. 공식 정보는 <a href="https://www.seouljwo.kr" target="_blank" rel="noopener">정원오 공식 홈페이지</a> 및 <a href="https://www.nec.go.kr" target="_blank" rel="noopener">중앙선거관리위원회</a>를 참고하시기 바랍니다.</p>
     <p class="ft-cr ft-cr-sub">전국 후보자 공약 열람 및 공보물 다운로드는 <a href="https://policy.nec.go.kr" target="_blank" rel="noopener">중앙선관위 정책공약마당</a>에서 가능합니다.<br><span class="ft-meta">마지막 업데이트 · 2026년 5월 28일</span></p>
   </div>
 </footer>
