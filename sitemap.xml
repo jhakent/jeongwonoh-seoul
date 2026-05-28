@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://jeongwonoh-seoul.pages.dev/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://jeongwonoh-seoul.pages.dev/jwo-og.png</image:loc>
+      <image:title>기호 1번 더불어민주당 서울특별시장 후보 정원오</image:title>
+      <image:caption>일 잘하는 서울시장 정원오. 하나씩 착착!</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jeongwonoh-seoul.pages.dev/jeongwonoh-poster.webp</image:loc>
+      <image:title>정원오 후보 공식 포스터</image:title>
+    </image:image>
+  </url>
+</urlset>
