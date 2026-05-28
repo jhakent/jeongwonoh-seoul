@@ -2050,25 +2050,31 @@ async function shareSite(){
     url: url
   };
 
-  // 1차: Web Share API (모바일 카톡/문자/메모 등 시스템 시트)
-  if(navigator.share){
+  // 모바일 여부 판별 (터치 + 좁은 화면 + Web Share 지원)
+  const isMobile = (
+    navigator.share &&
+    (('ontouchstart' in window) || navigator.maxTouchPoints > 0) &&
+    window.matchMedia('(max-width: 820px)').matches
+  );
+
+  // 모바일: 네이티브 공유 시트
+  if(isMobile){
     try {
       await navigator.share(data);
       return;
     } catch(err){
-      // 사용자가 취소한 경우는 조용히 종료
       if(err && err.name === 'AbortError') return;
-      // 그 외 에러는 폴백으로
+      // 실패 시 아래 복사로 폴백
     }
   }
 
-  // 2차: 클립보드 복사 (전체 메시지)
+  // 데스크탑(또는 공유 실패): 클립보드 복사 + 안내
   try {
     await navigator.clipboard.writeText(shareText);
-    showToast('공유 메시지가 복사됐어요! 카카오톡에 붙여넣기 하세요.');
+    showToast('공유 메시지가 복사됐어요! 원하는 곳에 붙여넣기 하세요.');
     return;
   } catch(err){
-    // 3차: execCommand 폴백 (구형 브라우저)
+    // execCommand 폴백 (구형 브라우저)
     try {
       const ta = document.createElement('textarea');
       ta.value = shareText;
@@ -2078,7 +2084,7 @@ async function shareSite(){
       ta.select();
       document.execCommand('copy');
       document.body.removeChild(ta);
-      showToast('공유 메시지가 복사됐어요! 카카오톡에 붙여넣기 하세요.');
+      showToast('공유 메시지가 복사됐어요! 원하는 곳에 붙여넣기 하세요.');
     } catch(err2){
       showToast('주소창의 URL을 복사해 공유해주세요.');
     }
