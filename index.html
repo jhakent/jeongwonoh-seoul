@@ -235,6 +235,44 @@ img.emoji{
   opacity:.92;
 }
 .hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:2}
+
+/* 히어로 우하단 노란 원형 버튼 */
+.hero-circle{
+  position:absolute;
+  right:var(--pad-x);
+  bottom:40px;
+  z-index:5;
+  width:108px;height:108px;
+  border-radius:50%;
+  border:0;
+  background:#FFD84A;
+  color:#08315F;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  font-size:17.5px;
+  font-weight:800;
+  line-height:1.3;
+  letter-spacing:-0.02em;
+  text-align:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.28), inset 0 2px 0 rgba(255,255,255,.4);
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
+  animation:heroCirclePulse 2.6s ease-in-out infinite;
+}
+.hero-circle:hover{
+  transform:scale(1.07);
+  box-shadow:0 12px 30px rgba(0,0,0,.34), inset 0 2px 0 rgba(255,255,255,.4);
+}
+@keyframes heroCirclePulse{
+  0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.28), inset 0 2px 0 rgba(255,255,255,.4), 0 0 0 0 rgba(255,216,74,.5)}
+  50%{box-shadow:0 8px 24px rgba(0,0,0,.28), inset 0 2px 0 rgba(255,255,255,.4), 0 0 0 12px rgba(255,216,74,0)}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-circle{animation:none}
+}
 .hero-no{
   display:inline-flex;align-items:center;gap:16px;
   margin-bottom:30px;
@@ -292,6 +330,7 @@ img.emoji{
   letter-spacing:-0.005em;
   border:1px solid rgba(255,255,255,.1);
 }
+
 
 /* TABS */
 .tabs{
@@ -1137,6 +1176,13 @@ img.emoji{
   html{font-size:17px}
   .mbr{display:inline}
   .hero{padding:28px var(--pad-x) 40px}
+  .hero-circle{
+    width:84px;height:84px;
+    font-size:14.5px;
+    bottom:16px;
+    right:14px;
+  }
+  .hero-meta{padding-right:96px}
   .hero-portrait{
     height:auto;
     width:78%;
@@ -1285,6 +1331,9 @@ img.emoji{
       <span class="hero-chip">3선 행정가</span>
       <span class="hero-chip">한양대 도시대학원 박사 수료</span>
     </div>
+    <button type="button" class="hero-circle" id="heroCircle" aria-label="우리 동네 공약 보기">
+      우리 동네<br>공약 보기
+    </button>
   </div>
 </section>
 
@@ -1842,6 +1891,19 @@ tabs.forEach(tab=>{
     }
   });
 });
+
+// 히어로 노란 원형 버튼 → 자치구 섹션 워프
+const heroCircle = document.getElementById('heroCircle');
+if(heroCircle){
+  heroCircle.addEventListener('click', ()=>{
+    const target = document.getElementById('district');
+    if(target){
+      const offset = 68;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({top, behavior:'smooth'});
+    }
+  });
+}
 
 const sections = ['intro','record','vision','chakchak','saejung','district','vote'];
 const tabMap = {};
