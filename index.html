@@ -848,6 +848,14 @@ img.emoji{
   padding:32px 28px;
   border-radius:var(--r-lg);
   backdrop-filter:blur(8px);
+  position:relative;
+}
+.vote-card-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:16px;
 }
 .vote-card-tag{
   display:inline-block;
@@ -857,7 +865,27 @@ img.emoji{
   background:rgba(255,216,74,.14);
   padding:6px 14px;
   border-radius:var(--r-pill);
-  margin-bottom:16px;
+}
+.vote-dday{
+  display:inline-flex;align-items:center;
+  font-size:14px;font-weight:800;
+  letter-spacing:-0.01em;
+  color:#08315F;
+  background:#FFD84A;
+  padding:6px 13px;
+  border-radius:var(--r-pill);
+  line-height:1;
+  box-shadow:0 4px 12px rgba(0,0,0,.18);
+  flex-shrink:0;
+}
+.vote-dday.is-today{
+  background:#fff;
+  color:var(--primary);
+}
+.vote-dday.is-past{
+  background:rgba(255,255,255,.16);
+  color:rgba(255,255,255,.6);
+  box-shadow:none;
 }
 .vote-card-date{
   font-size:27px;font-weight:700;
@@ -1775,12 +1803,18 @@ img.emoji{
 
     <div class="vote-grid">
       <div class="vote-card">
-        <span class="vote-card-tag">사전투표</span>
+        <div class="vote-card-head">
+          <span class="vote-card-tag">사전투표</span>
+          <span class="vote-dday" data-vote-date="2026-05-29"></span>
+        </div>
         <div class="vote-card-date">5월 29일(금)<br>5월 30일(토)</div>
         <p class="vote-card-time">오전 6시 ~ 오후 6시<br>전국 모든 사전투표소에서 투표</p>
       </div>
       <div class="vote-card">
-        <span class="vote-card-tag">본투표</span>
+        <div class="vote-card-head">
+          <span class="vote-card-tag">본투표</span>
+          <span class="vote-dday" data-vote-date="2026-06-03"></span>
+        </div>
         <div class="vote-card-date">6월 3일(수)</div>
         <p class="vote-card-time">오전 6시 ~ 오후 6시<br>내 주소지 투표소에서 투표</p>
       </div>
@@ -2095,6 +2129,29 @@ async function shareSite(){
 document.querySelectorAll('[data-share]').forEach(btn=>{
   btn.addEventListener('click', shareSite);
 });
+
+// 투표 D-day 자동 계산
+(function(){
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  document.querySelectorAll('.vote-dday').forEach(el=>{
+    const ds = el.getAttribute('data-vote-date');
+    if(!ds) return;
+    const parts = ds.split('-').map(Number);
+    const target = new Date(parts[0], parts[1]-1, parts[2]);
+    target.setHours(0,0,0,0);
+    const diff = Math.round((target - today) / 86400000);
+    if(diff > 0){
+      el.textContent = 'D-' + diff;
+    } else if(diff === 0){
+      el.textContent = 'D-DAY';
+      el.classList.add('is-today');
+    } else {
+      el.textContent = '투표 종료';
+      el.classList.add('is-past');
+    }
+  });
+})();
 </script>
 </body>
 </html>
